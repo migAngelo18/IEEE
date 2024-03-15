@@ -1,0 +1,90 @@
+.principal {
+  text-align: center;
+  background-color: white;
+  border: 2px solid transparent; /* Define uma borda transparente */
+  border-radius: 10px; /* Define o raio dos cantos da borda */
+  box-shadow: 0 0 0 2px #000; /* Cria uma sombra ao redor da borda */
+  padding: 20px; /* Apenas para demonstração */
+  width: 900px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+body {
+  background-color: #0e1d5f;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tarefas {
+  text-align: left;
+  display: flex;
+  background-color: rgb(221, 218, 218);
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+  margin-bottom: 15px;
+  flex-direction: column;
+  line-height: 1px;
+  padding-top: 0px;
+  border-bottom: 2px solid gray;
+}
+
+.conteudo, .categoria {
+  transform: translate(0%,40%);
+}
+
+.ListaTarefas, .newTarefas, .listaTarefasConc {
+  border-bottom: 3px solid black;
+}
+
+.buttons {
+  align-self: flex-end;
+  top: 50%;
+  transform:translate(-10%,-100%);
+}
+
+.buttons button, .newTarefas button {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 8px 16px; 
+  font-size: 14px; 
+  font-weight: bold; 
+  opacity: 0.8;
+  transition: opacity 0.5s, background-color 0.5s, color 0.5s;
+}
+
+.botao1 {
+  color: white;
+  background-color: rgb(2, 194, 2);
+  opacity: 1;
+}
+
+.botao2 {
+  color: white;
+  background-color: red;
+}
+
+.buttons button:hover, .newTarefas button:hover {
+  background-color: #0508d1; /* Define a cor de fundo quando o mouse está sobre o botão */
+  color: #fdfdfd;
+}
+
+.newTarefas form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newTarefas form > * {
+  margin-bottom: 10px;
+}
+
+input, select {
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px;
+  border: 1px solid rgb(2, 194, 2);
+}
