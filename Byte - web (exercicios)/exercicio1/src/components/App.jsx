@@ -1,8 +1,7 @@
 import React from 'react'
-import RemoveTarefa from '../App'
-import ConcluirTarefa from '../App'
 
-const tarefas  = ({ tarefas, RemoveTarefa }) => {
+
+const tarefas  = ({ tarefas, RemoveTarefa, ConcluirTarefa }) => {
     
   return (
     <div className='tarefas'>

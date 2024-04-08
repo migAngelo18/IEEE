@@ -1,15 +1,15 @@
 import React from 'react';
 import tarefas from './App';
 
-const TarefasConcluidas = ({ tarefasConcluidas }) => {
+const TarefasConcluidas = ({ tarefasconcluidas }) => {
   return (
     <div className='listaTarefasConc'>
         <h1>Tarefas Concluidas</h1>
         <div className='TarefasConc'>
-        {tarefasConcluidas.map((tarefas) => (
-          <div key={tarefas.id}>
-            <p>{tarefas.text}</p>
-            <p>({tarefas.category})</p>
+        {tarefasconcluidas.map((tasks) => (
+          <div key={tasks.id}>
+            <p>{tasks.text}</p>
+            <p>({tasks.category})</p>
           </div>
         ))}
       </div>
