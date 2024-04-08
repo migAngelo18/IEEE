@@ -50,17 +50,20 @@ function App() {
 
   const ConcluirTarefa = (id) => {
     const NovasTarefas = tarefas.map((tarefa) =>
-      tarefa.id === id ? { ...tarefa, isCompleted: !tarefa.isCompleted } : tarefa
+      tarefa.id === id ? { ...tarefa, isCompleted: true } : tarefa,
     );
+    let taskDone = 
     setTarefas(NovasTarefas);
-  
+   
+  }
     
-    const tarefaConcluida = NovasTarefas.find((tarefa) => tarefa.id === id);
-    if (tarefaConcluida) {
+  const tarefaConcluida = (id, tasksDone) =>{
+       tasksDone = tarefas.sort((tarefa) => tarefa.id === id);
+    
       // Adiciona a tarefa concluída ao estado tarefasConcluidas
-      setTarefasConcluidas([...tarefasConcluidas, tarefaConcluida]);
-    }
-  };
+      setTarefasConcluidas([...tarefasConcluidas, tasksDone]);
+  } 
+    
   
 
 
@@ -71,11 +74,15 @@ function App() {
           <p>Nenhuma tarefa adicionada</p>
         ) : 
       (tarefas.map((tarefas) => (
-        <Tarefas key={tarefas.id} tarefas={tarefas} RemoveTarefa={RemoveTarefa} ConcluirTarefa={ConcluirTarefa}/>
-      )))}
+        (tarefas.filter((tarefas.isCompleted == false) => {
+          <Tarefas key={tarefas.id} tarefas={tarefas} RemoveTarefa={RemoveTarefa} ConcluirTarefa={ConcluirTarefa}/>
+        })
+      ))))}
+        
+  
     </div>
     <NewTarefas AddTarefa={AddTarefa} />
-        <TarefasConcluidas tarefasConcluidas={tarefasConcluidas} /> 
+        <TarefasConcluidas tarefasconcluidas={tarefasConcluidas} /> 
     </div>;
 }
 
