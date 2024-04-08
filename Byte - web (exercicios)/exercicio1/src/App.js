@@ -74,8 +74,12 @@ function App() {
           <p>Nenhuma tarefa adicionada</p>
         ) : 
       (tarefas.map((tarefas) => (
-        <Tarefas key={tarefas.id} tarefas={tarefas} RemoveTarefa={RemoveTarefa} ConcluirTarefa={ConcluirTarefa}/>
-      )))}
+        (tarefas.filter((tarefas.isCompleted == false) => {
+          <Tarefas key={tarefas.id} tarefas={tarefas} RemoveTarefa={RemoveTarefa} ConcluirTarefa={ConcluirTarefa}/>
+        })
+      ))))}
+        
+  
     </div>
     <NewTarefas AddTarefa={AddTarefa} />
         <TarefasConcluidas tarefasconcluidas={tarefasConcluidas} /> 

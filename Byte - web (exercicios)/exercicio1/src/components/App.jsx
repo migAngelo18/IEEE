@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const tarefas  = ({ tarefas, RemoveTarefa, ConcluirTarefa }) => {
+const tarefas  = ({ tarefas, RemoveTarefa, ConcluirTarefa, isCompleted}) => {
     
   return (
     <div className='tarefas'>
